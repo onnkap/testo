@@ -77,7 +77,6 @@ class Hangman():
     max_wrong = len(HANGMAN) - 1
     WORDS = ("слово", "игра", "стол", "стул", "курс", "сибгути", "мышь", "экран", "кнопка", "код" )  # Слова для угадывания
     word = choice(WORDS)  # Слово, которое нужно угадать
-    print (word)
     def count(amount):
         return  "_" * amount # Одна черточка для каждой буквы в слове, которое нужно угадать
     so_far =count(len(word))
