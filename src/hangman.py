@@ -76,7 +76,10 @@ HANGMAN = (
 max_wrong = len(HANGMAN) - 1
 WORDS = ("слово", "игра", "стол", "стул", "курс", "сибгути", "мышь", "экран", "кнопка", "код" )  # Слова для угадывания
 word = choice(WORDS)  # Слово, которое нужно угадать
-so_far = "_" * len(word)  # Одна черточка для каждой буквы в слове, которое нужно угадать
+print (word)
+class LengthCheck():
+    leng= "_" * len(word) # Одна черточка для каждой буквы в слове, которое нужно угадать
+so_far = LengthCheck.leng 
 wrong = 0  # Количество неверных предположений, сделанных игроком
 used = []  # Буквы уже угаданы
 
@@ -95,16 +98,18 @@ while wrong < max_wrong and so_far != word:
     if guess in word:  # Если введённая буква есть в загаданном слове, то выводим соответствующее сообщение
         print("\nДа!", guess, "есть в слове!")
         new = ""
-        for i in range(len(word)):  # В цикле добавляем найденную букву в нужное место
-            if guess == word[i]:
-                new += guess
-            else:
-                new += so_far[i]
-        so_far = new
-
+        class LetterCheck():
+            for i in range(len(word)):  # В цикле добавляем найденную букву в нужное место
+                if guess == word[i]:
+                    new += guess
+                else:
+                    new += so_far[i]
+                place = new
+        so_far=LetterCheck.place
     else:
         print("\nИзвините, буквы \"" + guess + "\" нет в слове.")  # Если буквы нет, то выводим соответствующее сообщение
         wrong += 1
+
 if wrong == max_wrong:  # Если игрок превысил кол-во ошибок, то его повесили
     print(HANGMAN[wrong])
     print("\nТебя повесили!")
