@@ -78,8 +78,9 @@ WORDS = ("слово", "игра", "стол", "стул", "курс", "сибг
 word = choice(WORDS)  # Слово, которое нужно угадать
 print (word)
 class LengthCheck():
-    leng= "_" * len(word) # Одна черточка для каждой буквы в слове, которое нужно угадать
-so_far = LengthCheck.leng 
+    def count(amount):
+        return  "_" * amount # Одна черточка для каждой буквы в слове, которое нужно угадать
+so_far = LengthCheck.count(len(word))
 wrong = 0  # Количество неверных предположений, сделанных игроком
 used = []  # Буквы уже угаданы
 
