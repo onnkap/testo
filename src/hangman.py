@@ -98,6 +98,7 @@ class Hangman():
         used.append(guess)  # В список использованных букв добавляется введённая буква
         if guess in word:  # Если введённая буква есть в загаданном слове, то выводим соответствующее сообщение
             print("\nДа!", guess, "есть в слове!")
+            new=""
             def lettercheck(let,wordmass,massplase):
                 new = ""
                 for i in range(len(wordmass)):  # В цикле добавляем найденную букву в нужное место
