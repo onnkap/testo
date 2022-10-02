@@ -38,4 +38,5 @@ jobs:
       run: |
         pip install pytest
         pip install pytest-cov
-        pytest Hangman/tests/tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        cd Hangman/tests/
+        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
