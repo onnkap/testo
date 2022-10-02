@@ -11,6 +11,7 @@ class TestLengthCheck(unittest.TestCase):
     word="стол"
     guess="с"
     so_far=""
+    new=""
     for i in range(len(word)):  # В цикле добавляем найденную букву в нужное место
       if guess == word[i]:
         new += guess
