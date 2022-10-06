@@ -1,4 +1,4 @@
-class Hangman():
+class Hangman(): # тесто номер один пуша
     from random import choice
 
     HANGMAN = (
